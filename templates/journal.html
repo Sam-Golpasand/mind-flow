@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+MindFlow - Journal
+{% endblock %}
+
+{% block main %}
+
+<h1 style="margin-bottom: 2%;">{{username}}'s Journal</h1>
+
+<form action="/journal" method="post">
+    <div class="input-group" style="width: 40%; height: 40%; margin: auto;">
+        <textarea class="form-control" id="content" name="content"></textarea>
+    </div>
+    <div style="margin-top: 10px;">
+      <input class="btn btn-primary" type="submit" name="submit" value="New Entry" id="submit" style="margin-bottom: 10px; margin-right: 35%;">
+    </div>
+
+
+</form>
+
+<div class="row">
+
+    {% for journal in journals %}
+    <div class="col-sm-6 mb-3 mb-sm-0" style="margin-top: 10px; width: 40%; height: 40%; margin: 10px auto;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ journal[0] }}</h5>
+          <p class="card-text">{{ journal[1] }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

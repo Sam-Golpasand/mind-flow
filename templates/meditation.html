@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+MindFlow - Meditation
+{% endblock %}
+
+{% block main %}
+
+<h1>Meditation</h1>
+
+<p>
+  Meditation is a practice in which an individual uses a technique – such as mindfulness, or focuses the mind on a particular object, thought, or activity <br>– to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state.
+
+</p>
+
+<div class="row col-centered" style=" width: 50%; margin: auto; margin-top: 5%;">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">10 minute meditation</h5>
+        <p class="card-text">Find a place to sit comfortably, prefferably with no distractions</p>
+        <audio controls>
+          <source src="\static\10minute.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">20 minute meditation</h5>
+        <p class="card-text">Find a place to sit comfortably with absolutely no distractions. It's important to have a
+          peaceful enviorment when meditating for longer periods</p>
+        <audio controls>
+          <source src="\static\20minute.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
