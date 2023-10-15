@@ -177,7 +177,7 @@ def register():
         c = conn.cursor()
 
 
-        try:
+        try:    
             c.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, token))
             conn.commit()
             return redirect("/")
